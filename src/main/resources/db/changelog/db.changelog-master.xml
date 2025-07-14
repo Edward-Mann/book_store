@@ -25,4 +25,5 @@
 
     <!-- fourth: inserting initial data -->
     <include file="data/001-insert-initial-data.xml" relativeToChangelogFile="true"/>
+    <include file="data/002-insert-publisher-author-data.xml" relativeToChangelogFile="true"/>
 </databaseChangeLog>

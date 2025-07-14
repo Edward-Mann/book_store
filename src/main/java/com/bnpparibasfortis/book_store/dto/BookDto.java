@@ -1,17 +1,11 @@
 package com.bnpparibasfortis.book_store.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.Data;
 
 import java.math.BigDecimal;
 import java.util.List;
 
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
+@Data
 public class BookDto {
     private Long id;
     private String title;
@@ -20,6 +14,8 @@ public class BookDto {
     private BigDecimal price;
     private String publishedDate;
     private String publisherName;
+    private Long publisherId;
     private List<String> authorNames;
+    private List<Long> authorIds;
     private int stockQuantity;
 }

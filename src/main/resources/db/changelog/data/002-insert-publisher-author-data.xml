@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.20.xsd">
+
+    <changeSet id="002-insert-publisher-author-data" author="edward.mann">
+        <!-- Insert sample publishers -->
+        <insert tableName="publisher">
+            <column name="name" value="Penguin Random House"/>
+            <column name="address" value="1745 Broadway, New York, NY 10019"/>
+            <column name="website" value="https://www.penguinrandomhouse.com"/>
+        </insert>
+
+        <insert tableName="publisher">
+            <column name="name" value="HarperCollins Publishers"/>
+            <column name="address" value="195 Broadway, New York, NY 10007"/>
+            <column name="website" value="https://www.harpercollins.com"/>
+        </insert>
+
+        <insert tableName="publisher">
+            <column name="name" value="Simon &amp; Schuster"/>
+            <column name="address" value="1230 Avenue of the Americas, New York, NY 10020"/>
+            <column name="website" value="https://www.simonandschuster.com"/>
+        </insert>
+
+        <!-- Insert sample authors -->
+        <insert tableName="author">
+            <column name="first_name" value="J.K."/>
+            <column name="last_name" value="Rowling"/>
+            <column name="bio" value="British author, best known for the Harry Potter series of fantasy novels."/>
+        </insert>
+
+        <insert tableName="author">
+            <column name="first_name" value="Stephen"/>
+            <column name="last_name" value="King"/>
+            <column name="bio" value="American author of horror, supernatural fiction, suspense, crime, science-fiction, and fantasy novels."/>
+        </insert>
+
+        <insert tableName="author">
+            <column name="first_name" value="Agatha"/>
+            <column name="last_name" value="Christie"/>
+            <column name="bio" value="English writer known for her sixty-six detective novels and fourteen short story collections."/>
+        </insert>
+
+        <insert tableName="author">
+            <column name="first_name" value="George"/>
+            <column name="last_name" value="Orwell"/>
+            <column name="bio" value="English novelist, essayist, journalist and critic, famous for works like 1984 and Animal Farm."/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

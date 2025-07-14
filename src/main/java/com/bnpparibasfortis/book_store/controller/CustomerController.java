@@ -67,7 +67,7 @@ public class CustomerController {
      */
     @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/upgrade-to-admin/{userId}")
-    public ResponseEntity<ApiResponse<CustomerDto>> upgradeToAdmin(@PathVariable @Positive Long userId) {
+    public ResponseEntity<ApiResponse<CustomerDto>> upgradeToAdmin(@PathVariable @Positive(message = "Customer ID must be positive") Long userId) {
         Customer upgraded = customerService.upgradeToAdmin(userId);
         CustomerDto responseDto = customerMapper.toDto(upgraded);
         return ResponseEntity.ok(ApiResponse.success("User upgraded to admin successfully", responseDto));

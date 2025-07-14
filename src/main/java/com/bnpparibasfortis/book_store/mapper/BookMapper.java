@@ -15,20 +15,29 @@ import java.util.Set;
 public interface BookMapper {
 
     @Mapping(source = "publisher.name", target = "publisherName")
+    @Mapping(source = "publisher.id", target = "publisherId")
+    @Mapping(source = "authors", target = "authorIds", qualifiedByName = "authorsToIds")
     @Mapping(source = "authors", target = "authorNames", qualifiedByName = "authorsToNames")
     BookDto toDto(Book book);
 
-    @Named("authorsToNames")
-    default List<String> authorsToNames(Set<Author> authors) {
+    @Named("authorsToIds")
+    default List<Long> authorsToIds(Set<Author> authors) {
         if (authors == null) {
             return new ArrayList<>();
         }
         return authors.stream()
-                .map(author -> author.getFirstName() + " " + author.getLastName())
+                .map(Author::getId)
                 .toList();
     }
 
-    // todo BS-3 sort out the logic when creating a book entity
+    @Named("authorsToNames")
+    default List<String> authorsToNames(Set<Author> authors) {
+        return authors.stream()
+                .map(Author::getFullName)
+                .toList();
+    }
+
+
     @Mapping(target = "authors", ignore = true)
     @Mapping(target = "publisher", ignore = true)
     Book toEntity(BookDto dto);

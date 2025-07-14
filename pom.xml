@@ -12,8 +12,8 @@
         <relativePath/>
     </parent>
 
-    <groupId>com.example.bookstore</groupId>
-    <artifactId>bookstore-backend</artifactId>
+    <groupId>com.example.book_store</groupId>
+    <artifactId>book_store-backend</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
 
@@ -43,14 +43,17 @@
             <artifactId>spring-boot-starter-logging</artifactId>
         </dependency>
 
-        <!-- Security & OAuth2 Resource Server (Keycloak JWT) -->
+        <!-- Spring MVC and Security tests-->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- Security for Spring -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-oauth2-resource-server</artifactId>
         </dependency>
 
         <!-- Liquibase for migrations -->

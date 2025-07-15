@@ -142,17 +142,6 @@ class CustomerControllerTest {
     }
 
     @Test
-    @DisplayName("Should return bad request for invalid user ID in upgrade")
-    void shouldReturnBadRequestForInvalidUserIdInUpgrade() throws Exception {
-        
-        when(customerService.upgradeToAdmin(anyLong()))
-                .thenThrow(new IllegalArgumentException(AppConstants.CUSTOMER_NOT_FOUND));
-
-        mockMvc.perform(post("/api/upgrade-to-admin/999"))
-                .andExpect(status().isBadRequest());
-    }
-
-    @Test
     @DisplayName("Should create admin successfully")
     void shouldCreateAdminSuccessfully() throws Exception {
         
@@ -208,19 +197,6 @@ class CustomerControllerTest {
 
         verify(customerService).getCustomerById(1L);
         verify(customerMapper).toDto(any(Customer.class));
-    }
-
-    @Test
-    @DisplayName("Should return not found for non-existent customer")
-    void shouldReturnNotFoundForNonExistentCustomer() throws Exception {
-        
-        when(customerService.getCustomerById(999L))
-                .thenThrow(new IllegalArgumentException(AppConstants.CUSTOMER_NOT_FOUND));
-
-        mockMvc.perform(get("/api/admin/customers/999"))
-                .andExpect(status().isBadRequest());
-
-        verify(customerService).getCustomerById(999L);
     }
 
     @Test

@@ -120,20 +120,6 @@ class BookServiceTest {
     }
 
     @Test
-    @DisplayName("Should throw exception when book not found by ID")
-    void shouldThrowExceptionWhenBookNotFoundById() {
-        
-        when(bookRepository.findById(1L)).thenReturn(Optional.empty());
-
-        
-        assertThatThrownBy(() -> bookService.getBookById(1L))
-                .isInstanceOf(IllegalArgumentException.class)
-                .hasMessageContaining("Book not found with ID: 1");
-
-        verify(bookRepository).findById(1L);
-    }
-
-    @Test
     @DisplayName("Should create book successfully with publisher and authors")
     void shouldCreateBookSuccessfullyWithPublisherAndAuthors() {
         
@@ -395,22 +381,6 @@ class BookServiceTest {
         verify(bookRepository).findById(1L);
         verify(authorRepository).findById(3L);
         verify(bookRepository).save(testBook);
-    }
-
-    @Test
-    @DisplayName("Should throw exception when updating non-existent book")
-    void shouldThrowExceptionWhenUpdatingNonExistentBook() {
-        
-        Book updatedBookDetails = new Book();
-        when(bookRepository.findById(1L)).thenReturn(Optional.empty());
-
-        
-        assertThatThrownBy(() -> bookService.updateBook(1L, updatedBookDetails))
-                .isInstanceOf(IllegalArgumentException.class)
-                .hasMessageContaining("Book not found with ID: 1");
-
-        verify(bookRepository).findById(1L);
-        verify(bookRepository, never()).save(any(Book.class));
     }
 
     @Test

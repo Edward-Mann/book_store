@@ -1,24 +1,37 @@
-# dependencies
+# Node.js dependencies
 node_modules/
+node/
 
-# production builds
+# Production builds
 dist/
 build/
 out/
+target/
 
-# local env files
+# Maven specific
+*.jar
+*.war
+*.ear
+*.class
+*.log
+
+# Local env files
 .env
 .env.local
 .env.*.local
 
-# logs
+# Logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+*.log
 
 # IDEs and editors
 .vscode/
 .idea/
+*.iml
+*.ipr
+*.iws
 *.suo
 *.ntvs*
 *.njsproj
@@ -28,6 +41,41 @@ yarn-error.log*
 .DS_Store
 Thumbs.db
 
+# Maven wrapper (kept for reproducible builds)
 mvnw
 mvnw.cmd
 .mvn/
+
+# Temporary files
+*.tmp
+*.temp
+*~
+
+# Package files
+*.tgz
+*.tar.gz
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+
+# Dependency directories
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity

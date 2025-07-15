@@ -40,6 +40,7 @@
 /Users/edward/Documents/interview assessments/bnpparibasfortis/book_store/backend/src/main/java/com/bnpparibasfortis/book_store/dto/OrderDto.java
 /Users/edward/Documents/interview assessments/bnpparibasfortis/book_store/backend/src/main/java/com/bnpparibasfortis/book_store/repository/CartItemRepository.java
 /Users/edward/Documents/interview assessments/bnpparibasfortis/book_store/backend/src/main/java/com/bnpparibasfortis/book_store/controller/CartController.java
+/Users/edward/Documents/interview assessments/bnpparibasfortis/book_store/backend/src/main/java/com/bnpparibasfortis/book_store/service/ServiceHelper.java
 /Users/edward/Documents/interview assessments/bnpparibasfortis/book_store/backend/src/main/java/com/bnpparibasfortis/book_store/model/Cart.java
 /Users/edward/Documents/interview assessments/bnpparibasfortis/book_store/backend/src/main/java/com/bnpparibasfortis/book_store/model/User.java
 /Users/edward/Documents/interview assessments/bnpparibasfortis/book_store/backend/src/main/java/com/bnpparibasfortis/book_store/dto/CartItemDto.java
@@ -48,6 +49,7 @@
 /Users/edward/Documents/interview assessments/bnpparibasfortis/book_store/backend/src/main/java/com/bnpparibasfortis/book_store/mapper/BookMapper.java
 /Users/edward/Documents/interview assessments/bnpparibasfortis/book_store/backend/src/main/java/com/bnpparibasfortis/book_store/repository/OrderItemRepository.java
 /Users/edward/Documents/interview assessments/bnpparibasfortis/book_store/backend/src/main/java/com/bnpparibasfortis/book_store/dto/OrderItemDto.java
+/Users/edward/Documents/interview assessments/bnpparibasfortis/book_store/backend/src/main/java/com/bnpparibasfortis/book_store/exception/BookNotFoundException.java
 /Users/edward/Documents/interview assessments/bnpparibasfortis/book_store/backend/src/main/java/com/bnpparibasfortis/book_store/dto/BookDto.java
 /Users/edward/Documents/interview assessments/bnpparibasfortis/book_store/backend/src/main/java/com/bnpparibasfortis/book_store/dto/LoginRequest.java
 /Users/edward/Documents/interview assessments/bnpparibasfortis/book_store/backend/src/main/java/com/bnpparibasfortis/book_store/repository/UserRepository.java

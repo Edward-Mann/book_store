@@ -13,11 +13,15 @@ book-store/
 │   └── docker/            # Docker configuration
 ├── frontend/               # React frontend module
 │   ├── src/               # React application source
+│   │   ├── components/    # React components
 │   │   ├── public/        # Static files
-│   │   ├── src/           # React components and logic
+│   │   ├── App.tsx        # Main App component
+│   │   ├── index.tsx      # Entry point
 │   │   └── package.json   # NPM dependencies
 │   └── pom.xml           # Frontend Maven configuration
-└── pom.xml               # Parent Maven configuration
+├── pom.xml               # Parent Maven configuration
+├── mvnw                  # Maven wrapper
+└── mvnw.cmd              # Maven wrapper (Windows)
 ```
 
 ## Prerequisites

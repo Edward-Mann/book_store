@@ -26,10 +26,12 @@ com/bnpparibasfortis/book_store/security/CustomAuthFailureHandler.class
 com/bnpparibasfortis/book_store/mapper/AuthorMapperImpl.class
 com/bnpparibasfortis/book_store/mapper/PublisherMapperImpl.class
 com/bnpparibasfortis/book_store/mapper/CartItemMapperImpl.class
+com/bnpparibasfortis/book_store/service/ServiceHelper.class
 com/bnpparibasfortis/book_store/mapper/OrderMapperImpl.class
 com/bnpparibasfortis/book_store/controller/CartController.class
 com/bnpparibasfortis/book_store/mapper/CustomerMapperImpl.class
 com/bnpparibasfortis/book_store/controller/CustomerController$1.class
+com/bnpparibasfortis/book_store/exception/BookNotFoundException.class
 com/bnpparibasfortis/book_store/model/Customer.class
 com/bnpparibasfortis/book_store/repository/CartRepository.class
 com/bnpparibasfortis/book_store/dto/CustomerDto.class
